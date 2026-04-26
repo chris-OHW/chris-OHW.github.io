@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Christopher Dorin — Founder, Systems Engineer & Software Builder</title>
+<meta name="description" content="Christopher Dorin is a systems engineer, cybersecurity-focused technologist, and founder of Reaper Software LLC, building SaaS products, automation systems, trading tools, and mobile games.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Cinzel:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#06070c; --surface:#0d1018; --surface2:#141926; --line:rgba(255,255,255,.09);
+  --text:#f5f0e8; --muted:rgba(245,240,232,.68); --dim:rgba(245,240,232,.52);
+  --green:#00e5a0; --blue:#38a7ff; --purple:#8f63ff; --gold:#e5ad3f; --amber:#ffcf73;
+  --max:1180px; --shadow:0 22px 70px rgba(0,0,0,.42);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  min-height:100vh;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--text);
+  background:
+    radial-gradient(circle at 14% 8%, rgba(0,229,160,.12), transparent 27%),
+    radial-gradient(circle at 86% 12%, rgba(229,173,63,.11), transparent 28%),
+    radial-gradient(circle at 50% 100%, rgba(143,99,255,.10), transparent 36%),
+    linear-gradient(180deg,#05060a 0%,#090c14 46%,#05060a 100%);
+  overflow-x:hidden;
+}
+body::before{
+  content:"";position:fixed;inset:0;
+  background:linear-gradient(rgba(255,255,255,.024) 1px, transparent 1px),linear-gradient(90deg, rgba(255,255,255,.024) 1px, transparent 1px);
+  background-size:72px 72px;mask-image:radial-gradient(circle at center, black 35%, transparent 82%);
+  opacity:.26;pointer-events:none;
+}
+a{color:inherit;text-decoration:none}.container{width:min(var(--max),calc(100% - 40px));margin:0 auto}
+nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(18px);background:rgba(6,7,12,.78);border-bottom:1px solid rgba(255,255,255,.07)}
+.nav-inner{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.logo{display:flex;flex-direction:column;gap:2px}
+.logo b{font-family:Cinzel,serif;font-size:22px;letter-spacing:.04em;background:linear-gradient(180deg,#fff,#e5ad3f);-webkit-background-clip:text;background-clip:text;color:transparent}
+.logo span{font-size:11px;color:var(--dim);font-weight:800;text-transform:uppercase;letter-spacing:.18em}
+.nav-links{display:flex;align-items:center;gap:22px;font-size:13px;color:var(--muted);font-weight:700}
+.nav-links a:hover{color:var(--green)}.nav-cta{padding:11px 16px;border-radius:14px;background:linear-gradient(135deg,rgba(0,229,160,.16),rgba(56,167,255,.12));border:1px solid rgba(0,229,160,.28);color:#d9fff3}
+.hero{padding:86px 0 52px}.hero-grid{display:grid;grid-template-columns:1.06fr .94fr;gap:38px;align-items:center}
+.badge{display:inline-flex;align-items:center;gap:10px;padding:8px 12px;border-radius:999px;border:1px solid rgba(0,229,160,.23);background:rgba(0,229,160,.075);color:#9dffdf;font-size:12px;font-weight:900;letter-spacing:.15em;text-transform:uppercase;margin-bottom:22px}
+.badge::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 18px rgba(0,229,160,.7)}
+h1{font-family:Cinzel,serif;font-size:clamp(46px,7vw,84px);line-height:.95;letter-spacing:-.04em;margin-bottom:22px}
+h1 span{display:block;background:linear-gradient(135deg,var(--green),var(--blue),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-desc{max-width:720px;color:var(--muted);font-size:18px;line-height:1.78;margin-bottom:28px}
+.hero-actions,.card-actions,.contact-actions{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 20px;border-radius:15px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.045);color:#f5f0e8;font-weight:850;font-size:14px;transition:.22s ease}
+.btn:hover{transform:translateY(-2px);border-color:rgba(0,229,160,.38);box-shadow:0 16px 40px rgba(0,0,0,.3)}
+.btn.primary{color:#05100c;border-color:rgba(0,229,160,.5);background:linear-gradient(135deg,var(--green),#b6ffe6);box-shadow:0 0 30px rgba(0,229,160,.2)}
+.btn.gold{color:#100905;border-color:rgba(229,173,63,.45);background:linear-gradient(135deg,var(--gold),#ffdc83);box-shadow:0 0 30px rgba(229,173,63,.18)}
+.panel{border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.025)),rgba(13,16,24,.78);border-radius:28px;box-shadow:var(--shadow)}
+.hero-panel{padding:24px;position:relative;overflow:hidden}.hero-panel::before{content:"";position:absolute;inset:-40% -20% auto auto;width:340px;height:340px;background:radial-gradient(circle,rgba(0,229,160,.16),transparent 68%);pointer-events:none}
+.metrics{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.metric{position:relative;padding:22px;border-radius:22px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.035);overflow:hidden}
+.metric::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--green),transparent)}
+.metric.blue::before{background:linear-gradient(90deg,var(--blue),transparent)}.metric.purple::before{background:linear-gradient(90deg,var(--purple),transparent)}.metric.gold::before{background:linear-gradient(90deg,var(--gold),transparent)}
+.metric strong{display:block;font-size:34px;line-height:1;margin-bottom:8px}.metric span{color:var(--dim);font-size:12px;text-transform:uppercase;letter-spacing:.12em;font-weight:800;line-height:1.4}
+.section{padding:66px 0}.section.alt{background:rgba(255,255,255,.025);border-block:1px solid rgba(255,255,255,.055)}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:28px;margin-bottom:28px}.kicker{display:block;color:var(--green);font-size:12px;font-weight:900;letter-spacing:.2em;text-transform:uppercase;margin-bottom:8px}
+h2{font-family:Cinzel,serif;font-size:clamp(32px,4.4vw,52px);line-height:1;letter-spacing:-.035em}.section-head p{color:var(--muted);line-height:1.7;max-width:560px}
+.about-grid,.projects-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:18px}.about-card,.company-card,.project-feature,.contact-panel{padding:28px}
+.about-card p,.company-card p,.project-feature p,.contact-panel p{color:var(--muted);line-height:1.82;font-size:16px}.about-card p+p{margin-top:16px}.about-card strong{color:#fff;font-weight:800}
+.tag-grid{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px}.tag{padding:8px 11px;border-radius:999px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.045);color:rgba(245,240,232,.75);font-size:12px;font-weight:750}.tag.highlight{color:#d9fff3;border-color:rgba(0,229,160,.25);background:rgba(0,229,160,.06)}
+.company-card{position:relative;overflow:hidden;background:radial-gradient(circle at 82% 18%,rgba(229,173,63,.13),transparent 34%),linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.025))}
+.company-card h3,.project-feature h3{font-family:Cinzel,serif;font-size:36px;margin:8px 0 12px}
+.company-list{display:grid;gap:12px;margin:20px 0}.company-item{padding:14px;border-radius:18px;background:rgba(0,0,0,.16);border:1px solid rgba(255,255,255,.075)}.company-item b{display:block;margin-bottom:4px}.company-item span{color:var(--dim);font-size:13px;line-height:1.5}
+.grid,.education-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{padding:24px;border-radius:24px;border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.02)),rgba(13,16,24,.84);box-shadow:0 18px 56px rgba(0,0,0,.28);transition:.22s ease}.card:hover{transform:translateY(-4px);border-color:rgba(0,229,160,.25);box-shadow:0 22px 70px rgba(0,0,0,.38)}
+.card .label{color:var(--green);font-size:11px;font-weight:900;letter-spacing:.16em;text-transform:uppercase;margin-bottom:12px}.card h3{font-size:21px;margin-bottom:10px}.card p,.card ul{color:var(--muted);line-height:1.65;font-size:14px}.card ul{margin:14px 0 0 18px}
+.projects-grid{grid-template-columns:1.15fr .85fr}.small-projects{display:grid;gap:18px}
+.timeline{position:relative;padding-left:24px;border-left:1px solid rgba(255,255,255,.1)}.exp{position:relative;padding:0 0 34px 28px}.exp:last-child{padding-bottom:0}.exp::before{content:"";position:absolute;left:-29px;top:6px;width:11px;height:11px;border-radius:50%;background:var(--green);box-shadow:0 0 18px rgba(0,229,160,.45)}.exp-top{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:6px}.exp h3{font-size:20px}.date{color:var(--dim);font-size:12px;border:1px solid rgba(255,255,255,.08);padding:5px 10px;border-radius:999px}.role{color:var(--green);font-size:13px;font-weight:800;margin-bottom:12px}.exp ul{color:var(--muted);line-height:1.7;padding-left:20px}
+.edu h3{font-size:18px;margin-bottom:8px}.edu .degree{color:var(--purple);font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.12em;margin-bottom:8px}.edu p{color:var(--muted);line-height:1.65;font-size:14px}
+.contact-panel{text-align:center}.contact-panel p{max-width:720px;margin:12px auto 24px}.contact-actions{justify-content:center}
+footer{padding:28px 0 50px;color:var(--dim)}.footer-inner{border-top:1px solid rgba(255,255,255,.08);padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px}
+@media(max-width:980px){.hero-grid,.about-grid,.projects-grid{grid-template-columns:1fr}.grid,.education-grid{grid-template-columns:1fr}.section-head{align-items:start;flex-direction:column}}
+@media(max-width:760px){.container{width:min(var(--max),calc(100% - 24px))}.nav-inner{align-items:flex-start;min-height:auto;padding:16px 0}.nav-links{display:none}.hero{padding:54px 0 36px}.metrics{grid-template-columns:1fr 1fr}h1{font-size:44px}}
+@media(max-width:520px){.metrics{grid-template-columns:1fr}.hero-actions,.card-actions,.contact-actions{flex-direction:column}.btn{width:100%}}
+
+/* === REAPER-INSPIRED DARK / EDGY POLISH === */
+:root{
+  --bg:#040306;
+  --surface:#0a090f;
+  --surface2:#111018;
+  --line:rgba(255,255,255,.085);
+  --text:#f6efe4;
+  --muted:rgba(246,239,228,.66);
+  --dim:rgba(246,239,228,.46);
+  --green:#e8a520;
+  --blue:#ffcf73;
+  --purple:#9b6cff;
+  --gold:#e8a520;
+  --amber:#ffcf73;
+  --red:#9f1f1a;
+  --blood:#5d0d0b;
+  --shadow:0 28px 90px rgba(0,0,0,.56);
+}
+body{
+  background:
+    radial-gradient(circle at 8% 6%, rgba(159,31,26,.22), transparent 30%),
+    radial-gradient(circle at 92% 12%, rgba(232,165,32,.10), transparent 28%),
+    radial-gradient(circle at 50% 105%, rgba(155,108,255,.10), transparent 38%),
+    linear-gradient(180deg,#030204 0%,#08060c 42%,#030204 100%) !important;
+}
+body::before{
+  background:
+    linear-gradient(rgba(232,165,32,.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(232,165,32,.025) 1px, transparent 1px) !important;
+  background-size:84px 84px !important;
+  opacity:.20 !important;
+}
+body::after{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:0;
+  background:
+    radial-gradient(circle at 50% 18%, transparent 0 34%, rgba(0,0,0,.22) 68%, rgba(0,0,0,.48) 100%),
+    linear-gradient(90deg, rgba(0,0,0,.55), transparent 18%, transparent 82%, rgba(0,0,0,.55));
+  mix-blend-mode:multiply;
+}
+nav, main, footer{position:relative;z-index:1}
+nav{
+  background:rgba(3,2,5,.82) !important;
+  border-bottom:1px solid rgba(232,165,32,.10) !important;
+  box-shadow:0 14px 50px rgba(0,0,0,.36);
+}
+.logo b{
+  background:linear-gradient(180deg,#fff8ea 0%,#efc56d 46%,#8f251d 100%) !important;
+  -webkit-background-clip:text !important;
+  background-clip:text !important;
+}
+.logo span{color:rgba(246,239,228,.52) !important}
+.nav-links a:hover{color:var(--amber) !important}
+.nav-cta{
+  background:linear-gradient(135deg,rgba(232,165,32,.18),rgba(159,31,26,.24)) !important;
+  border-color:rgba(232,165,32,.32) !important;
+  color:#fff1d8 !important;
+}
+.badge{
+  background:rgba(232,165,32,.07) !important;
+  border-color:rgba(232,165,32,.25) !important;
+  color:#ffd991 !important;
+}
+.badge::before{
+  background:linear-gradient(180deg,#ffd991,#9f1f1a) !important;
+  box-shadow:0 0 20px rgba(232,165,32,.65) !important;
+}
+h1,h2,.company-card h3,.project-feature h3{
+  text-shadow:0 0 38px rgba(232,165,32,.08), 0 0 70px rgba(159,31,26,.08);
+}
+h1 span{
+  background:linear-gradient(135deg,#fff3d8 0%,#e8a520 38%,#9f1f1a 76%,#6847ff 100%) !important;
+  -webkit-background-clip:text !important;
+  background-clip:text !important;
+  color:transparent !important;
+}
+.panel,.card{
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.018)),
+    radial-gradient(circle at 88% 0%,rgba(232,165,32,.045),transparent 34%),
+    rgba(8,7,12,.88) !important;
+  border-color:rgba(255,255,255,.085) !important;
+  box-shadow:0 28px 90px rgba(0,0,0,.52), inset 0 1px 0 rgba(255,255,255,.045) !important;
+}
+.panel:hover,.card:hover{
+  border-color:rgba(232,165,32,.28) !important;
+  box-shadow:0 30px 100px rgba(0,0,0,.62),0 0 50px rgba(232,165,32,.06), inset 0 1px 0 rgba(255,255,255,.06) !important;
+}
+.hero-panel{
+  background:
+    radial-gradient(circle at 80% 10%,rgba(232,165,32,.14),transparent 36%),
+    radial-gradient(circle at 12% 90%,rgba(159,31,26,.16),transparent 42%),
+    rgba(8,7,12,.92) !important;
+}
+.hero-panel::before{
+  background:radial-gradient(circle,rgba(232,165,32,.18),transparent 68%) !important;
+}
+.metric::before{background:linear-gradient(90deg,var(--gold),transparent) !important}
+.metric.blue::before{background:linear-gradient(90deg,var(--red),transparent) !important}
+.metric.purple::before{background:linear-gradient(90deg,var(--purple),transparent) !important}
+.metric.gold::before{background:linear-gradient(90deg,var(--amber),transparent) !important}
+.metric strong{color:#fff0d2}
+.metric span{color:rgba(246,239,228,.55)}
+.btn.primary{
+  background:linear-gradient(135deg,#e8a520,#ffdb83) !important;
+  color:#100905 !important;
+  border-color:rgba(255,219,131,.58) !important;
+  box-shadow:0 0 32px rgba(232,165,32,.22),0 14px 44px rgba(0,0,0,.3) !important;
+}
+.btn.gold{
+  background:linear-gradient(135deg,#9f1f1a,#e8a520) !important;
+  color:#fff1dd !important;
+  border-color:rgba(232,165,32,.38) !important;
+}
+.btn:hover{
+  border-color:rgba(232,165,32,.42) !important;
+  box-shadow:0 18px 54px rgba(0,0,0,.42),0 0 34px rgba(232,165,32,.10) !important;
+}
+.kicker{color:#ffcf73 !important}
+.section.alt{
+  background:rgba(255,255,255,.018) !important;
+  border-block:1px solid rgba(232,165,32,.07) !important;
+}
+.company-card{
+  background:
+    radial-gradient(circle at 82% 18%,rgba(232,165,32,.16),transparent 34%),
+    radial-gradient(circle at 14% 90%,rgba(159,31,26,.14),transparent 36%),
+    linear-gradient(180deg,rgba(255,255,255,.052),rgba(255,255,255,.02)) !important;
+  border-color:rgba(232,165,32,.15) !important;
+}
+.company-item{
+  background:rgba(0,0,0,.22) !important;
+  border-color:rgba(232,165,32,.09) !important;
+}
+.tag.highlight{
+  color:#ffe5b1 !important;
+  border-color:rgba(232,165,32,.30) !important;
+  background:rgba(232,165,32,.075) !important;
+}
+.tag{
+  border-color:rgba(255,255,255,.085) !important;
+  background:rgba(255,255,255,.035) !important;
+}
+.card .label,.role{color:#ffcf73 !important}
+.exp::before{
+  background:linear-gradient(180deg,#ffcf73,#9f1f1a) !important;
+  box-shadow:0 0 20px rgba(232,165,32,.44) !important;
+}
+.timeline{border-left-color:rgba(232,165,32,.14) !important}
+footer{background:linear-gradient(180deg,transparent,rgba(0,0,0,.18))}
+.footer-inner{border-top-color:rgba(232,165,32,.10) !important}
+
+</style>
+</head>
+<body>
+<nav>
+  <div class="container nav-inner">
+    <a class="logo" href="#home"><b>Christopher Dorin</b><span>Founder · Systems Engineer</span></a>
+    <div class="nav-links">
+      <a href="#about">About</a><a href="#company">Reaper Software</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a class="nav-cta" href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<main id="home">
+<section class="hero"><div class="container hero-grid">
+  <div>
+    <div class="badge">Reaper Software Founder · Systems Engineer · Cybersecurity</div>
+    <h1>Christopher Dorin <span>Founder & Engineer</span></h1>
+    <p class="hero-desc">I’m a systems engineer and cybersecurity-focused technologist building production software through Reaper Software LLC — including SaaS tools, automated trading systems, prediction-market bots, and mobile games.</p>
+    <div class="hero-actions">
+      <a class="btn primary" href="#company">View Reaper Software</a>
+      <a class="btn" href="#experience">View Experience</a>
+      <a class="btn gold" href="mailto:chrisdorin25@icloud.com">Contact Me</a>
+    </div>
+  </div>
+  <div class="panel hero-panel"><div class="metrics">
+    <div class="metric"><strong>LLC</strong><span>Founder of Reaper Software</span></div>
+    <div class="metric blue"><strong>16+</strong><span>Technical certifications</span></div>
+    <div class="metric purple"><strong>3</strong><span>Degrees across cyber, analytics & economics</span></div>
+    <div class="metric gold"><strong>4+</strong><span>Product lines shipped or in review</span></div>
+  </div></div>
+</div></section>
+
+<section class="section alt" id="about"><div class="container">
+  <div class="section-head"><div><span class="kicker">01 — About</span><h2>Security-minded builder with a product mindset.</h2></div><p>My work blends enterprise systems, cybersecurity, data, automation, and product development.</p></div>
+  <div class="about-grid">
+    <div class="panel about-card">
+      <p>I’m an <strong>IT Applications Technician / Systems Engineer</strong> at McHenry County College, working on the Enterprise Applications team supporting ERP systems, data integrity, access control, and institutional platforms.</p>
+      <p>Outside of enterprise IT, I founded <strong>Reaper Software LLC</strong> to build real products: business SaaS, trading automation, prediction-market tools, sports intelligence systems, and mobile games.</p>
+      <p>My background spans cybersecurity, business analytics, econometrics, cloud systems, SQL reporting, software security auditing, and data-driven decision making.</p>
+    </div>
+    <div class="panel about-card"><span class="kicker">Certifications & Strengths</span><div class="tag-grid">
+      <span class="tag highlight">Security+</span><span class="tag highlight">Network+</span><span class="tag highlight">CEH</span><span class="tag highlight">CCNA</span><span class="tag highlight">CISM</span><span class="tag highlight">CISA</span><span class="tag">Azure AI</span><span class="tag">Azure Security</span><span class="tag">SQL</span><span class="tag">Python</span><span class="tag">Power BI</span><span class="tag">ERP Security</span><span class="tag">Cloud Migration</span><span class="tag">Software Products</span>
+    </div></div>
+  </div>
+</div></section>
+
+<section class="section" id="company"><div class="container">
+  <div class="section-head"><div><span class="kicker">02 — Reaper Software LLC</span><h2>A software company built around execution.</h2></div><p>Reaper Software is my company for building useful, high-intent software products across business operations, automation, markets, and games.</p></div>
+  <div class="panel company-card">
+    <h3>Reaper Software</h3>
+    <p>Reaper Software LLC builds across multiple product lanes: commercial SaaS, trading systems, prediction-market automation, sports intelligence, and original mobile games. The goal is simple: ship products that are useful, sharp, and built to perform.</p>
+    <div class="company-list">
+      <div class="company-item"><b>AirQuote — HVAC SaaS</b><span>Customer-ready HVAC quoting platform for fast estimates, customer messages, quote PDFs, and field-service workflows.</span></div>
+      <div class="company-item"><b>Trading & Automation Systems</b><span>AlgoTrader Pro, Kalshi weather/economics bots, and sports betting intelligence with Telegram alert delivery.</span></div>
+      <div class="company-item"><b>Mobile Games</b><span>Trash Panda Rush, Wild Runners, and Echoes of the Unmade — original mobile games currently built and up for review.</span></div>
+    </div>
+    <div class="card-actions">
+      <a class="btn primary" href="https://reapersoftware.com" target="_blank" rel="noopener">Visit Reaper Software</a>
+      <a class="btn gold" href="https://airquote-rho.vercel.app/" target="_blank" rel="noopener">Launch AirQuote</a>
+      <a class="btn" href="https://algo-trader-pro.netlify.app/" target="_blank" rel="noopener">AlgoTrader Pro</a>
+    </div>
+  </div>
+</div></section>
+
+<section class="section alt" id="projects"><div class="container">
+  <div class="section-head"><div><span class="kicker">03 — Featured Work</span><h2>Products, systems, and technical projects.</h2></div><p>Selected work across Reaper Software, enterprise systems, security auditing, and cloud infrastructure.</p></div>
+  <div class="projects-grid">
+    <div class="panel project-feature"><span class="kicker">Founder Project</span><h3>Reaper Software Product Ecosystem</h3><p>Built and launched a multi-product software company presence covering AirQuote for HVAC quoting, AlgoTrader Pro, Kalshi automation bots, sports odds alerts, and original mobile games. This work combines product strategy, frontend development, automation, market analysis, and brand execution.</p><div class="card-actions" style="margin-top:22px;"><a class="btn primary" href="https://reapersoftware.com" target="_blank" rel="noopener">Open Company Site</a><a class="btn" href="https://dorinspire87.gumroad.com/l/vimvo" target="_blank" rel="noopener">Bot Service Packs</a></div></div>
+    <div class="small-projects"><div class="card"><div class="label">SaaS Product</div><h3>AirQuote</h3><p>HVAC quote-generation platform built for customer-ready estimates, dashboard workflows, and small-business field operations.</p></div><div class="card"><div class="label">Automation</div><h3>AlgoTrader Pro</h3><p>Automated trading product with multi-strategy positioning, backtesting, and live execution framing.</p></div></div>
+  </div>
+  <div class="grid" style="margin-top:18px;">
+    <div class="card"><div class="label">Enterprise Systems</div><h3>Azure Cloud Migration</h3><p>Migrated organizational systems and sensitive data from on-premise infrastructure to Microsoft Azure cloud architecture.</p></div>
+    <div class="card"><div class="label">Security</div><h3>ERP Security Auditing</h3><p>Reviewed access, permissions, and role-based controls across enterprise platforms including Ellucian Colleague, WebI, and SoftDocs.</p></div>
+    <div class="card"><div class="label">Games</div><h3>Mobile Game Portfolio</h3><p>Designed and built multiple original mobile games with distinct product identities, game loops, unlocks, and review-ready pages.</p></div>
+  </div>
+</div></section>
+
+<section class="section" id="skills"><div class="container">
+  <div class="section-head"><div><span class="kicker">04 — Skills</span><h2>Technical toolkit.</h2></div><p>Systems, data, cloud, cybersecurity, automation, and product development.</p></div>
+  <div class="grid">
+    <div class="card"><div class="label">Languages & Data</div><h3>Python, SQL, R, HTML/CSS</h3><ul><li>SQL reporting and data analysis</li><li>Python automation and scripting</li><li>Frontend implementation and static sites</li><li>Data modeling and dashboard thinking</li></ul></div>
+    <div class="card"><div class="label">Security & Systems</div><h3>IAM, Auditing, ERP, IR</h3><ul><li>Software security auditing</li><li>Role-based access review</li><li>ERP platforms and institutional systems</li><li>Digital forensics and incident response foundation</li></ul></div>
+    <div class="card"><div class="label">Cloud & Product</div><h3>Azure, Power BI, SaaS</h3><ul><li>Cloud migration support</li><li>Microsoft 365 administration</li><li>Power BI dashboards</li><li>Product positioning and launch execution</li></ul></div>
+  </div>
+</div></section>
+
+<section class="section alt" id="experience"><div class="container">
+  <div class="section-head"><div><span class="kicker">05 — Experience</span><h2>Enterprise systems experience.</h2></div></div>
+  <div class="timeline">
+    <div class="exp"><div class="exp-top"><h3>McHenry County College</h3><span class="date">06/2024 – Present</span></div><div class="role">Applications Technician / Systems Engineer · Crystal Lake, IL</div><ul><li>Member of the Enterprise Applications team supporting college-wide systems and ERP infrastructure.</li><li>Lead software security audits for ERP systems including Ellucian Colleague, reviewing mnemonic and access permissions for 300+ users.</li><li>Conducted WebI and SoftDocs security audits across workflow and monitor access for 200+ users.</li><li>Implemented student/faculty PII data-cleaning initiatives to improve data integrity and compliance.</li><li>Write custom SQL queries for reporting, system analysis, and operational support.</li></ul></div>
+    <div class="exp"><div class="exp-top"><h3>McCrone Associates</h3><span class="date">11/2022 – 01/2024</span></div><div class="role">IT Support Analyst / Systems Administrator · Westmont, IL</div><ul><li>Spearheaded Azure cloud migration from on-premise infrastructure to cloud-based operations.</li><li>Supported Microsoft 365 tenant administration, licensing, configuration, and end-user systems.</li><li>Installed and managed Crystal Reports integrated with LIMS Matrix Gemini laboratory systems.</li><li>Delivered Tier I, II, and III support across the organization.</li><li>Produced Power BI dashboards for operational and analytical reporting.</li></ul></div>
+  </div>
+</div></section>
+
+<section class="section" id="education"><div class="container">
+  <div class="section-head"><div><span class="kicker">06 — Education</span><h2>Academic foundation.</h2></div></div>
+  <div class="education-grid">
+    <div class="card edu"><div class="degree">Master of Arts</div><h3>University of Oklahoma</h3><p>Econometrics · GPA 3.85<br>Coursework includes software security, machine learning, algorithms, and data mining.</p></div>
+    <div class="card edu"><div class="degree">Master of Science</div><h3>Southern New Hampshire University</h3><p>Cybersecurity · GPA 3.82<br>Digital forensics, incident detection, data management, and security risk analysis.</p></div>
+    <div class="card edu"><div class="degree">Bachelor of Science</div><h3>Southern New Hampshire University</h3><p>Business Analytics · Minor in IT · GPA 3.85<br>Networks, operating systems, scripting, finance, and economics.</p></div>
+  </div>
+  <div class="tag-grid" style="margin-top:24px;"><span class="tag highlight">Eagle Scout</span><span class="tag">Dean’s List — All Terms</span><span class="tag">Phi Theta Kappa</span><span class="tag">Delta Mu Delta</span><span class="tag">Alpha Sigma Lambda</span><span class="tag">National Honor Society</span><span class="tag">Silver Chord 200+ Hours</span></div>
+</div></section>
+
+<section class="section alt" id="contact"><div class="container">
+  <div class="panel contact-panel"><span class="kicker">07 — Contact</span><h2>Let’s connect.</h2><p>Open to conversations around cybersecurity, software engineering, enterprise systems, SaaS products, automation, and Reaper Software.</p>
+    <div class="contact-actions">
+      <a class="btn primary" href="mailto:chrisdorin25@icloud.com">Email Me</a>
+      <a class="btn" href="tel:2248307121">Call</a>
+      <a class="btn" href="https://www.linkedin.com/in/christopher-dorin-75008b220/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="https://github.com/chris-OHW" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn gold" href="https://reapersoftware.com" target="_blank" rel="noopener">Reaper Software</a>
+    </div>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="container footer-inner"><span>© 2026 Christopher Dorin · Huntley, Illinois</span><span>Founder of Reaper Software LLC</span></div></footer>
+</body>
+</html>
