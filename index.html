@@ -380,6 +380,16 @@ body{
 }
 
 </style>
+
+<!-- Google tag (gtag.js) - Chris OHW GitHub Site -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X3HJMSWYE2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-X3HJMSWYE2');
+</script>
+
 </head>
 <body>
 <nav>
@@ -497,5 +507,28 @@ body{
 </main>
 
 <footer><div class="container footer-inner"><span>© 2026 Christopher Dorin · Huntley, Illinois</span><span>Founder of Reaper Software LLC</span></div></footer>
+
+<script>
+  // Chris OHW GitHub Site GA4 click tracking
+  document.addEventListener('click', function(event) {
+    var link = event.target.closest('a, button');
+    if (!link || typeof gtag !== 'function') return;
+
+    var label =
+      link.innerText ||
+      link.getAttribute('aria-label') ||
+      link.getAttribute('href') ||
+      'unknown_click';
+
+    var url = link.getAttribute('href') || '';
+
+    gtag('event', 'site_click', {
+      event_category: 'engagement',
+      event_label: label.trim().slice(0, 100),
+      link_url: url
+    });
+  });
+</script>
+
 </body>
 </html>
