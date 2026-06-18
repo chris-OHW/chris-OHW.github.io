@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Christopher Dorin — Founder, Systems Engineer & Software Builder</title>
-<meta name="description" content="Christopher Dorin is a systems engineer, cybersecurity-focused technologist, and founder of Reaper Software LLC, building SaaS products, automation systems, trading tools, and mobile games.">
+<title>Christopher Dorin — Founder of Reaper Software</title>
+<meta name="description" content="Christopher Dorin is the founder of Reaper Software LLC, building software products across SaaS, automation, sports betting intelligence, trading systems, prediction markets, and mobile games.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Cinzel:wght@600;700;800&display=swap" rel="stylesheet">
@@ -379,6 +379,48 @@ body{
   .company-list,.elite-proof-strip{grid-template-columns:1fr}
 }
 
+
+/* === FOUNDER SITE PRODUCT REFRESH === */
+:root{
+  --copper:#c8752d;
+  --bronze:#9f5a24;
+  --soft-gold:#f3c15f;
+  --airquote:#3da5ff;
+  --ktv:#47e56f;
+  --bots:#ef4444;
+  --games:#a855f7;
+}
+body{
+  background:
+    radial-gradient(circle at 11% 9%, rgba(159,31,26,.18), transparent 29%),
+    radial-gradient(circle at 87% 12%, rgba(243,193,95,.13), transparent 30%),
+    radial-gradient(circle at 48% 100%, rgba(200,117,45,.11), transparent 38%),
+    linear-gradient(180deg,#030204 0%,#09060a 45%,#030204 100%) !important;
+}
+.nav-links a:hover{color:var(--soft-gold) !important}
+.nav-cta,.btn.primary{background:linear-gradient(135deg,#f3c15f,#c8752d) !important;color:#120905 !important;border-color:rgba(243,193,95,.50) !important}
+.btn.gold{background:linear-gradient(135deg,#c8752d,#8f251d) !important;color:#fff2dc !important}
+.badge,.kicker,.card .label,.role{color:#ffd789 !important}
+h1 span{background:linear-gradient(135deg,#fff4de 0%,#f3c15f 38%,#c8752d 72%,#8f251d 100%) !important;-webkit-background-clip:text !important;background-clip:text !important;color:transparent !important}
+.hero-panel::after{
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.25;
+  background:linear-gradient(rgba(243,193,95,.04) 1px, transparent 1px),linear-gradient(90deg, rgba(243,193,95,.04) 1px, transparent 1px);
+  background-size:42px 42px;mask-image:radial-gradient(circle at 60% 45%, black, transparent 78%);
+}
+.company-list{grid-template-columns:repeat(4,1fr) !important}
+.product-airquote,.product-card-airquote{border-color:rgba(61,165,255,.26) !important;box-shadow:inset 0 1px 0 rgba(61,165,255,.08) !important}
+.product-ktv,.product-card-ktv{border-color:rgba(71,229,111,.28) !important;box-shadow:inset 0 1px 0 rgba(71,229,111,.08) !important}
+.product-bots,.product-card-bots{border-color:rgba(239,68,68,.26) !important;box-shadow:inset 0 1px 0 rgba(239,68,68,.08) !important}
+.product-games,.product-card-games{border-color:rgba(168,85,247,.28) !important;box-shadow:inset 0 1px 0 rgba(168,85,247,.08) !important}
+.product-airquote b,.product-card-airquote .label{color:#8fd0ff !important}
+.product-ktv b,.product-card-ktv .label{color:#a7ffba !important}
+.product-bots b,.product-card-bots .label{color:#ffaaa5 !important}
+.product-games b,.product-card-games .label{color:#d8b4fe !important}
+.metric strong{font-family:Cinzel,serif;background:linear-gradient(180deg,#fff7e7,#f3c15f 65%,#a44f20);-webkit-background-clip:text;background-clip:text;color:transparent}
+.about-card:first-child{border-color:rgba(243,193,95,.14) !important}
+@media(max-width:1180px){.company-list{grid-template-columns:repeat(2,1fr) !important}}
+@media(max-width:680px){.company-list{grid-template-columns:1fr !important}}
+
 </style>
 
 <!-- Google tag (gtag.js) - Chris OHW GitHub Site -->
@@ -394,9 +436,9 @@ body{
 <body>
 <nav>
   <div class="container nav-inner">
-    <a class="logo" href="#home"><b>Christopher Dorin</b><span>Founder · Systems Engineer</span></a>
+    <a class="logo" href="#home"><b>Christopher Dorin</b><span>Founder of Reaper Software</span></a>
     <div class="nav-links">
-      <a href="#about">About</a><a href="#company">Reaper Software</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a class="nav-cta" href="#contact">Contact</a>
+      <a href="#company">Reaper Software</a><a href="#products">Products</a><a href="#about">About</a><a href="#experience">Experience</a><a class="nav-cta" href="#contact">Contact</a>
     </div>
   </div>
 </nav>
@@ -404,30 +446,30 @@ body{
 <main id="home">
 <section class="hero"><div class="container hero-grid">
   <div>
-    <div class="badge">Reaper Software Founder · Systems Engineer · Cybersecurity</div>
-    <h1>Christopher Dorin <span>Founder & Engineer</span></h1>
-    <p class="hero-desc">I’m a systems engineer, cybersecurity-focused technologist, and founder of Reaper Software LLC. I build real software products across SaaS, automation, trading systems, prediction markets, and mobile games — combining enterprise discipline with founder-level execution.</p>
+    <div class="badge">Founder of Reaper Software · Products · Automation · Intelligence Systems</div>
+    <h1>Christopher Dorin <span>Founder of Reaper Software</span></h1>
+    <p class="hero-desc">I build and operate Reaper Software LLC — a software company creating products across SaaS, automation, sports betting intelligence, trading systems, prediction markets, and mobile games. My work combines enterprise systems discipline with founder-level product execution.</p>
     <div class="hero-actions">
-      <a class="btn primary" href="#company">View Reaper Software</a>
-      <a class="btn" href="#experience">View Experience</a>
-      <a class="btn gold" href="mailto:chrisdorin25@icloud.com">Contact Me</a>
+      <a class="btn primary" href="https://reaper.software" target="_blank" rel="noopener">Open Reaper Software</a>
+      <a class="btn gold" href="#products">View Products</a>
+      <a class="btn" href="mailto:chrisdorin25@icloud.com">Contact Me</a>
     </div>
   </div>
   <div class="panel hero-panel"><div class="metrics">
-    <div class="metric"><strong>LLC</strong><span>Founder of Reaper Software</span></div>
-    <div class="metric blue"><strong>16+</strong><span>Technical certifications</span></div>
-    <div class="metric purple"><strong>3</strong><span>Degrees across cyber, analytics & economics</span></div>
-    <div class="metric gold"><strong>4+</strong><span>Product lines shipped or in review</span></div>
+    <div class="metric"><strong>5</strong><span>Software products</span></div>
+    <div class="metric blue"><strong>3</strong><span>Active product brands</span></div>
+    <div class="metric purple"><strong>24/7</strong><span>Automation systems</span></div>
+    <div class="metric gold"><strong>1</strong><span>Software company</span></div>
   </div></div>
 </div></section>
 
 <section class="section alt" id="about"><div class="container">
-  <div class="section-head"><div><span class="kicker">01 — About</span><h2>Security-minded builder with a product mindset.</h2></div><p>My work blends enterprise systems, cybersecurity, data, automation, and product development.</p></div>
+  <div class="section-head"><div><span class="kicker">01 — About</span><h2>Founder, builder, and systems-minded operator.</h2></div><p>My work blends software products, data systems, automation, cybersecurity, and company-building.</p></div>
   <div class="about-grid">
     <div class="panel about-card">
-      <p>I’m an <strong>IT Applications Technician / Systems Engineer</strong> at McHenry County College, working on the Enterprise Applications team supporting ERP systems, data integrity, access control, and institutional platforms.</p>
-      <p>Outside of enterprise IT, I founded <strong>Reaper Software LLC</strong> to build real products: business SaaS, trading automation, prediction-market tools, sports intelligence systems, and mobile games.</p>
-      <p>My background spans cybersecurity, business analytics, econometrics, cloud systems, SQL reporting, software security auditing, and data-driven decision making.</p>
+      <p>I’m the founder of <strong>Reaper Software LLC</strong>, where I build real software products across business SaaS, sports betting intelligence, trading automation, prediction-market systems, and mobile games.</p>
+      <p>My enterprise background is in systems engineering, ERP platforms, data integrity, access control, SQL reporting, and cloud operations. That foundation shapes how I build products: practical, operational, secure, and useful.</p>
+      <p>The personal brand now supports the company brand: Reaper Software is the main vehicle, and this site is the founder profile behind it.</p>
     </div>
     <div class="panel about-card"><span class="kicker">Certifications & Strengths</span><div class="tag-grid">
       <span class="tag highlight">Security+</span><span class="tag highlight">Network+</span><span class="tag highlight">CEH</span><span class="tag highlight">CCNA</span><span class="tag highlight">CISM</span><span class="tag highlight">CISA</span><span class="tag">Azure AI</span><span class="tag">Azure Security</span><span class="tag">SQL</span><span class="tag">Python</span><span class="tag">Power BI</span><span class="tag">ERP Security</span><span class="tag">Cloud Migration</span><span class="tag">Software Products</span>
@@ -436,49 +478,51 @@ body{
 </div></section>
 
 <section class="section" id="company"><div class="container">
-  <div class="section-head"><div><span class="kicker">02 — Reaper Software LLC</span><h2>A software company built around execution.</h2></div><p>Reaper Software is my company for building useful, high-intent software products across business operations, automation, markets, and games.</p></div>
+  <div class="section-head"><div><span class="kicker">02 — Reaper Software LLC</span><h2>The software company behind the products.</h2></div><p>Reaper Software is the parent company for AirQuote, KilledTheVig, ReaperBots, trading automation, and mobile games.</p></div>
   <div class="panel company-card">
     <h3>Reaper Software</h3>
-    <p>Reaper Software LLC builds across multiple product lanes: commercial SaaS, trading systems, prediction-market automation, sports intelligence, and original mobile games. The goal is simple: ship products that are useful, sharp, and built to perform.</p>
+    <p>Reaper Software LLC builds edge-focused software products across business operations, automation, markets, intelligence systems, and entertainment. The goal is simple: ship products that perform, solve real problems, and can stand as real businesses.</p>
     <div class="company-list">
-      <div class="company-item"><b>AirQuote — HVAC SaaS</b><span>Customer-ready HVAC quoting platform for fast estimates, customer messages, quote PDFs, and field-service workflows.</span></div>
-      <div class="company-item"><b>Trading & Automation Systems</b><span>AlgoTrader Pro, Kalshi weather/economics bots, and sports betting intelligence with Telegram alert delivery.</span></div>
-      <div class="company-item"><b>Mobile Games</b><span>Trash Panda Rush, Wild Runners, and Echoes of the Unmade — original mobile games currently built and up for review.</span></div>
+      <div class="company-item product-airquote"><b>AirQuote</b><span>HVAC SaaS for quotes, CRM, invoicing, payments, scheduling, technician workflows, and customer-ready field operations.</span></div>
+      <div class="company-item product-ktv"><b>KilledTheVig</b><span>Sports betting intelligence terminal for odds, line movement, player props, replay, market context, and analyst-style decision support.</span></div>
+      <div class="company-item product-bots"><b>ReaperBots</b><span>Trading and automation systems including Kalshi weather/economics bots, market tools, and downloadable bot packages.</span></div>
+      <div class="company-item product-games"><b>Mobile Games</b><span>Original iOS games including Trash Panda Rush, Wild Runners, Echoes of the Unmade, and additional arcade-style releases.</span></div>
     </div>
     <div class="card-actions">
       <a class="btn primary" href="https://reaper.software" target="_blank" rel="noopener">Open Reaper Software</a>
-      <a class="btn gold" href="https://airquote-rho.vercel.app/" target="_blank" rel="noopener">Launch AirQuote</a>
-      <a class="btn" href="https://algo-trader-pro.netlify.app/" target="_blank" rel="noopener">AlgoTrader Pro</a>
+      <a class="btn gold" href="https://airquote-hvac.com" target="_blank" rel="noopener">Open AirQuote</a>
+      <a class="btn" href="https://killedthevig.com" target="_blank" rel="noopener">Open KilledTheVig</a>
     </div>
   </div>
 </div></section>
 
-<section class="section alt" id="projects"><div class="container">
-  <div class="section-head"><div><span class="kicker">03 — Featured Work</span><h2>Products, systems, and technical projects.</h2></div><p>Selected work across Reaper Software, enterprise systems, security auditing, and cloud infrastructure.</p></div>
+<section class="section alt" id="products"><div class="container">
+  <div class="section-head"><div><span class="kicker">03 — Product Portfolio</span><h2>Products under the Reaper Software umbrella.</h2></div><p>The focus is no longer side projects. These are product lines built to become real software businesses.</p></div>
   <div class="projects-grid">
-    <div class="panel project-feature"><span class="kicker">Founder Project</span><h3>Reaper Software Product Ecosystem</h3><p>Built and launched a multi-product software company presence covering AirQuote for HVAC quoting, AlgoTrader Pro, Kalshi automation bots, sports odds alerts, and original mobile games. This work combines product strategy, frontend development, automation, market analysis, and brand execution.</p><div class="card-actions" style="margin-top:22px;"><a class="btn primary" href="https://reaper.software" target="_blank" rel="noopener">Open Company Site</a><a class="btn" href="https://dorinspire87.gumroad.com/l/vimvo" target="_blank" rel="noopener">Bot Service Packs</a></div></div>
-    <div class="small-projects"><div class="card"><div class="label">SaaS Product</div><h3>AirQuote</h3><p>HVAC quote-generation platform built for customer-ready estimates, dashboard workflows, and small-business field operations.</p></div><div class="card"><div class="label">Automation</div><h3>AlgoTrader Pro</h3><p>Automated trading product with multi-strategy positioning, backtesting, and live execution framing.</p></div></div>
+    <div class="panel project-feature"><span class="kicker">Parent Company</span><h3>Reaper Software Product Ecosystem</h3><p>Reaper Software is the operating company behind a portfolio of products: AirQuote for field-service SaaS, KilledTheVig for sports betting market intelligence, ReaperBots for trading automation, and original mobile games. This work combines product strategy, frontend development, data systems, automation, market analysis, and brand execution.</p><div class="card-actions" style="margin-top:22px;"><a class="btn primary" href="https://reaper.software" target="_blank" rel="noopener">Open Company Site</a><a class="btn" href="https://killedthevig.com" target="_blank" rel="noopener">Open KTV</a></div></div>
+    <div class="small-projects"><div class="card product-card-airquote"><div class="label">SaaS Product</div><h3>AirQuote</h3><p>HVAC business software for quotes, customers, invoices, payments, memberships, technician workflows, and customer-facing quote PDFs.</p></div><div class="card product-card-ktv"><div class="label">Sports Intelligence</div><h3>KilledTheVig</h3><p>A Bloomberg-terminal-style sports betting intelligence platform for odds, market movement, props, replay, and signal context.</p></div></div>
   </div>
   <div class="grid" style="margin-top:18px;">
-    <div class="card"><div class="label">Enterprise Systems</div><h3>Azure Cloud Migration</h3><p>Migrated organizational systems and sensitive data from on-premise infrastructure to Microsoft Azure cloud architecture.</p></div>
-    <div class="card"><div class="label">Security</div><h3>ERP Security Auditing</h3><p>Reviewed access, permissions, and role-based controls across enterprise platforms including Ellucian Colleague, WebI, and SoftDocs.</p></div>
-    <div class="card"><div class="label">Games</div><h3>Mobile Game Portfolio</h3><p>Designed and built multiple original mobile games with distinct product identities, game loops, unlocks, and review-ready pages.</p></div>
+    <div class="card product-card-bots"><div class="label">Automation</div><h3>ReaperBots</h3><p>Trading and prediction-market automation systems, including Kalshi bot infrastructure and downloadable strategy packages.</p></div>
+    <div class="card product-card-games"><div class="label">Games</div><h3>Mobile Game Portfolio</h3><p>Original iOS games with separate identities, launch pages, game loops, unlocks, and review-ready product packaging.</p></div>
+    <div class="card"><div class="label">Enterprise Systems</div><h3>Systems Engineering</h3><p>ERP security auditing, Azure migration work, SQL reporting, access control review, and enterprise applications support.</p></div>
   </div>
 </div></section>
 
 <section class="section" id="skills"><div class="container">
-  <div class="section-head"><div><span class="kicker">04 — Skills</span><h2>Technical toolkit.</h2></div><p>Systems, data, cloud, cybersecurity, automation, and product development.</p></div>
+  <div class="section-head"><div><span class="kicker">04 — Skills</span><h2>Builder toolkit.</h2></div><p>Product development, systems engineering, data, cloud, cybersecurity, automation, and launch execution.</p></div>
   <div class="grid">
     <div class="card"><div class="label">Languages & Data</div><h3>Python, SQL, R, HTML/CSS</h3><ul><li>SQL reporting and data analysis</li><li>Python automation and scripting</li><li>Frontend implementation and static sites</li><li>Data modeling and dashboard thinking</li></ul></div>
     <div class="card"><div class="label">Security & Systems</div><h3>IAM, Auditing, ERP, IR</h3><ul><li>Software security auditing</li><li>Role-based access review</li><li>ERP platforms and institutional systems</li><li>Digital forensics and incident response foundation</li></ul></div>
-    <div class="card"><div class="label">Cloud & Product</div><h3>Azure, Power BI, SaaS</h3><ul><li>Cloud migration support</li><li>Microsoft 365 administration</li><li>Power BI dashboards</li><li>Product positioning and launch execution</li></ul></div>
+    <div class="card"><div class="label">Product & Launch</div><h3>SaaS, Brands, Analytics</h3><ul><li>Product positioning and launch execution</li><li>Netlify-hosted product sites</li><li>Analytics, payments, and user flows</li><li>Multi-product company strategy</li></ul></div>
   </div>
 </div></section>
 
 <section class="section alt" id="experience"><div class="container">
-  <div class="section-head"><div><span class="kicker">05 — Experience</span><h2>Enterprise systems experience.</h2></div></div>
+  <div class="section-head"><div><span class="kicker">05 — Experience</span><h2>Founder-led products and enterprise systems.</h2></div></div>
   <div class="timeline">
-    <div class="exp"><div class="exp-top"><h3>McHenry County College</h3><span class="date">06/2024 – Present</span></div><div class="role">Applications Technician / Systems Engineer · Crystal Lake, IL</div><ul><li>Member of the Enterprise Applications team supporting college-wide systems and ERP infrastructure.</li><li>Lead software security audits for ERP systems including Ellucian Colleague, reviewing mnemonic and access permissions for 300+ users.</li><li>Conducted WebI and SoftDocs security audits across workflow and monitor access for 200+ users.</li><li>Implemented student/faculty PII data-cleaning initiatives to improve data integrity and compliance.</li><li>Write custom SQL queries for reporting, system analysis, and operational support.</li></ul></div>
+    <div class="exp"><div class="exp-top"><h3>Reaper Software LLC</h3><span class="date">2025 – Present</span></div><div class="role">Founder · Software Products, Automation & Intelligence Systems</div><ul><li>Built and branded a multi-product software company spanning SaaS, sports betting intelligence, trading automation, prediction-market bots, and mobile games.</li><li>Launched and iterated AirQuote, KilledTheVig, ReaperBots / AlgoTrader systems, and a mobile game portfolio under one parent company identity.</li><li>Own product strategy, design direction, implementation, distribution planning, analytics, payments, hosting, and product-market positioning.</li></ul></div>
+    <div class="exp"><div class="exp-top"><h3>McHenry County College</h3><span class="date">06/2024 – 2026</span></div><div class="role">Applications Technician / Systems Engineer · Crystal Lake, IL</div><ul><li>Worked on the Enterprise Applications team supporting college-wide systems and ERP infrastructure.</li><li>Lead software security audits for ERP systems including Ellucian Colleague, reviewing mnemonic and access permissions for 300+ users.</li><li>Conducted WebI and SoftDocs security audits across workflow and monitor access for 200+ users.</li><li>Implemented student/faculty PII data-cleaning initiatives to improve data integrity and compliance.</li><li>Write custom SQL queries for reporting, system analysis, and operational support.</li></ul></div>
     <div class="exp"><div class="exp-top"><h3>McCrone Associates</h3><span class="date">11/2022 – 01/2024</span></div><div class="role">IT Support Analyst / Systems Administrator · Westmont, IL</div><ul><li>Spearheaded Azure cloud migration from on-premise infrastructure to cloud-based operations.</li><li>Supported Microsoft 365 tenant administration, licensing, configuration, and end-user systems.</li><li>Installed and managed Crystal Reports integrated with LIMS Matrix Gemini laboratory systems.</li><li>Delivered Tier I, II, and III support across the organization.</li><li>Produced Power BI dashboards for operational and analytical reporting.</li></ul></div>
   </div>
 </div></section>
@@ -494,7 +538,7 @@ body{
 </div></section>
 
 <section class="section alt" id="contact"><div class="container">
-  <div class="panel contact-panel"><span class="kicker">07 — Contact</span><h2>Let’s connect.</h2><p>Open to conversations around cybersecurity, software engineering, enterprise systems, SaaS products, automation, and Reaper Software.</p>
+  <div class="panel contact-panel"><span class="kicker">07 — Contact</span><h2>Let’s connect.</h2><p>Open to conversations around Reaper Software, SaaS products, automation, betting intelligence, trading systems, cybersecurity, and enterprise software.</p>
     <div class="contact-actions">
       <a class="btn primary" href="mailto:chrisdorin25@icloud.com">Email Me</a>
       <a class="btn" href="tel:2248307121">Call</a>
